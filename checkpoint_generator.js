@@ -3,8 +3,8 @@ const CSV = require("export-to-csv"),
 	  TurtleCoind = require('turtlecoin-rpc').TurtleCoind;
 
 const daemon = new TurtleCoind({
-	host: '104.243.33.176', // ip address or hostname of the Telluriumd host
-	port: 32302, // what port is the RPC server running on
+	host: '134.209.208.103', // ip address or hostname of the Telluriumd host
+	port: 11245, // what port is the RPC server running on
 	timeout: 30000, // request timeout
 	ssl: false // whether we need to connect using SSL/TLS
 });
@@ -30,7 +30,7 @@ class Checkpoint {
 	}
 }
 
-const checkpointEveryBlocks = 50;
+const checkpointEveryBlocks = 30;
 var checkpoints = [];
 
 daemon.getBlockCount().then(async (height) => {
