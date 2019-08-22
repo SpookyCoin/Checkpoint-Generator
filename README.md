@@ -1,4 +1,4 @@
-# Checkpoint-Generator for Oscillate network
+# Checkpoint-Generator for SpookyCoin network
 
 This NodeJS utility generates the current checkpoints.csv file from a daemon and saves it to disk.
 
@@ -10,11 +10,14 @@ This NodeJS utility generates the current checkpoints.csv file from a daemon and
 
 It's super easy to set up. Just type
 ```bash
-git clone https://github.com/oscillate-coin/Checkpoint-Generator && cd Checkpoint-Generator && npm start
+git clone https://github.com/oscillate-coin/Checkpoint-Generator
+cd Checkpoint-Generator
+npm install
+npm start
 ```
 Then it will fetch every 50th block's hash and save it into checkpoints.csv.
+The 12th line defines the spacing in blocks between each checkpoint. Set it to 1 when you want checkpoints every block that has been generated.
 
 ## Forking
 
-Forking is also super easy. You just need to edit checkpoint_generator.js in line 6, 7 and 33.
-The 33rd line defines the spacing in blocks between each checkpoint. Set it to 1 when you want checkpoints every block that has been generated.
+Forking is also super easy. You just need to edit checkpoint_generator.js in line 6, 7 and 12.
